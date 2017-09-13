@@ -357,7 +357,7 @@ void set_srand(void)
     long int tt;
     ftime(&tp);
     tt=1000*tp.time+tp.millitm;
-    srand(-((long int)(tt))%(DAY_LENGTH_IN_SECONDS)-1);
+    srand(-((long int)(tt))%((int)(DAY_LENGTH_IN_SECONDS))-1);
 }
 
 static size_t getTotalSystemMemory(void)

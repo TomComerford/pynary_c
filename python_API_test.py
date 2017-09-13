@@ -12,4 +12,4 @@ def run_test_binary():
 
     return output
 
-print run_test_binary()
+print(run_test_binary())
