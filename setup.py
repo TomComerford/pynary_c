@@ -1,7 +1,6 @@
 from distutils.core import setup, Extension
 import sys
 
-
 # binary_c must be installed. In this case, add libbinary_c.so to /usr/local/lib and run ldconfig as sudo
 
 version = 3-(sys.version_info[0] < 3)

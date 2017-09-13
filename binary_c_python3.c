@@ -97,7 +97,6 @@ static PyObject* binary_c_function_prototype(PyObject *self, PyObject *args){
     return NULL;
 
 
-
   /* Return the evolved binary */
   PyObject *ret = Py_BuildValue("");
 

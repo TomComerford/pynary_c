@@ -90,7 +90,6 @@ static PyObject* binary_c_function_prototype(PyObject *self, PyObject *args){
   double var1, var2;
   char* empty_str = "";
 
-
   /* Parse the input tuple */
   if (!PyArg_ParseTuple(args, "dd", &var1, &var2))
     return NULL;
