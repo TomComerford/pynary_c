@@ -1,0 +1,205 @@
+# List of commandline arguments for binary_c
+
+## PHYSICS ##
+  monte_carlo_kicks
+  disk_fed_novae
+  wind_fed_novae
+  RLOF_fed_novae
+  gravitational_radiation_model
+  jorb_RLOF_transfer_model
+  SN_impulse_method
+  post_SN_orbital_method
+  wind_mass_loss
+  gbwind
+  mattsson_Orich_tpagbwind
+  magnetic_braking_factor
+  gb_reimers_eta
+  gbwindfac
+  agbwindfac
+  tpagbwind
+  vwind_multiplier
+  superwind_mira_switchon
+  vw93_mira_shift
+  vw93_multiplier
+  tpagb_reimers_eta
+  wr_wind
+  wr_wind_fac (also wrwindfac)
+  eddfac
+  Bondi_Hoyle_accreion_factor (acc2)
+  BH_prescription
+  sn_sigma
+  sn_kick_distribution
+  wd_sigma
+  wd_kick_direction
+  wd_kick_when
+  wd_kick_pulse_number
+  max_tpagb_core_mass
+  amanda_dMHe
+  minimum_mass_for_carbon_ignition
+  minimum_mass_for_neon_ignition
+  max_neutron_star_mass
+  chandrasekhar_mass
+  overshooting_tpagb
+  delta_mcmin
+  lambda_min
+  lambda_multiplier
+  minimum_envelope_mass_for_third_dredgeup
+  mass_of_pmz
+  size_of_pmz
+  c13_eff
+  mc13_pocket_multiplier
+  E2_prescription
+  dtfac
+  hbbtfac
+  tidal_strength_factor
+  hachisu_qcrit
+  hachisu_disk_wind
+  mass_accretion_for_eld
+  merger_angular_momentum_factor
+  jorb_loss
+  wind_djorb_fac
+  lw
+  yields_dt
+  regular_logging_dt
+  CEMP_logg_maximum
+  CEMP_cfe_minimum
+  thick_disc_start_age
+  thick_disc_end_age
+  CEMP_minimum_age
+  escape_velocity
+  escape_fraction
+  pre_main_sequence
+  pre_main_sequence_fit_lobes
+  rlperi
+  qcrit_LMMS
+  qcrit_MS
+  qcrit_HG
+  qcrit_GB
+  qcrit_CHeB
+  qcrit_EAGB
+  qcrit_TPAGB
+  qcrit_HeMS
+  qcrit_HeHG
+  qcrit_HeGB
+  qcrit_HeWD
+  qcrit_COWD
+  qcrit_ONeWD
+  qcrit_NS
+  qcrit_BH
+  qcrit_degenerate_LMMS
+  qcrit_degenerate_MS
+  qcrit_degenerate_HG
+  qcrit_degenerate_GB
+  qcrit_degenerate_CHeB
+  qcrit_degenerate_EAGB
+  qcrit_degenerate_TPAGB
+  qcrit_degenerate_HeMS
+  qcrit_degenerate_HeHG
+  qcrit_degenerate_HeGB
+  qcrit_degenerate_HeWD
+  qcrit_degenerate_COWD
+  qcrit_degenerate_ONeWD
+  qcrit_degenerate_NS
+  qcrit_degenerate_BH
+  mass_for_Hestar_Ia_upper
+  mass_for_Hestar_Ia_lower
+  alphaCB
+  comenv_prescription
+  comenv_ms_accretion_mass
+  comenv_ms_accretion_fraction
+  comenv_ns_accretion_mass
+  comenv_ns_accretion_fraction
+  alpha_ce
+  lambda_ce
+  nelemans_recalc_eccentricity
+  nelemans_gamma
+  nelemans_minq
+  nelemans_max_frac_j_change
+  nelemans_n_comenvs
+  lambda_ionisation
+  WRLOF_method
+  minimum_timestep
+  RLOF_timestep_modulator
+  RLOF_mdot_factor
+  RLOF_f
+  minimum_separation_for_instant_RLOF
+  minimum_orbital_period_for_instant_RLOF
+  RLOF_method
+  RLOF_interpolation_method
+  epsnov
+  accretion_rate_novae_upper_limit
+  accretion_rate_sofa_xray_upper_limit
+  CRAP_parameter (bb)
+  rlof_gamma
+  comenv_ms_accretion_mass
+  nothirddup
+  third_dup_multiplier
+  noNeNaMgAl
+  no_supernova_yields
+  nucreacmult
+  initial_abundance_mix
+  init_abund
+  init_abund_mult
+  init_abund_dex
+  init_abunds_only
+  no_thermohaline_mixing
+  lithium_GB_post_Heflash
+  lithium_GB_post_1DUP
+  lithium_hbb_multiplier
+  rotationally_enhanced_mass_loss
+  AGB_method
+  rotationally_enhanced_exponent
+  rotationally_enhanced_fudge_power
+
+## POPULATION ##
+  metallicity (also z)
+  nucsyn_metallicity (also gce_metallicity)
+
+## SYSTEM ##
+  M_1
+  M_2
+  eccentricity
+  orbital_period
+  separation
+  stellar_type_1
+  stellar_type_2
+  max_evolution_time
+  vrot1
+  vrot2
+
+## I/O ##
+  log_filename
+  api_log_filename_prefix
+  hrdiag_output
+  internal_buffering
+  internal_buffering_compression
+  fabian_imf_log_time
+  fabian_imf_log_timestep
+  help
+  help_all
+  list_args
+  version
+  dumpversion
+  version_only
+  build
+  internals
+  warmup_cpu
+  batchmode
+
+## UNCLASSIFIED (for now) ##
+
+  POPULATION?
+    probability
+    phasevol
+    evolution_splitting
+    evolution_splitting_sn_n
+    evolution_splitting_maxdepth
+    repeat
+    random_systems
+
+  SYSTEM?
+    idum
+
+  OTHER
+    timestep_modulator
+    maximum_timestep

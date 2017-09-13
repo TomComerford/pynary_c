@@ -1,8 +1,6 @@
 #include <Python.h>
 #include "../src/API/binary_c_API.h"
-// #include "/home/andrews/Desktop/binary_c_old/src/API/binary_c_API.h"
 #include "binary_c_api.h"
-
 
 /*
  * binary_c/PYTHON API interface functions
@@ -25,7 +23,7 @@
  */
 /************************************************************/
 
-
+// OK
 static char module_docstring[] =
   "This module is a python wrapper around binary_c";
 static char create_binary_docstring[] =
@@ -34,28 +32,6 @@ static char run_binary_docstring[] =
   "Run one binary using binary_c";
 static char function_prototype_docstring[] =
   "The prototype for a binary_c python function";
-
-
-static PyObject* binary_c_create_binary(PyObject *self, PyObject *args);
-static PyObject* binary_c_run_binary(PyObject *self, PyObject *args);
-static PyObject* binary_c_function_prototype(PyObject *self, PyObject *args);
-
-
-static PyMethodDef module_methods[] = {
-    {"create_binary", binary_c_create_binary, METH_VARARGS, create_binary_docstring},
-    {"run_binary", binary_c_run_binary, METH_VARARGS, run_binary_docstring},
-    {"function_prototype", binary_c_function_prototype, METH_VARARGS, function_prototype_docstring},
-    {NULL, NULL, 0, NULL}
-};
-
-
-PyMODINIT_FUNC initbinary_c(void)
-{
-    PyObject *m = Py_InitModule3("binary_c", module_methods, module_docstring);
-    if (m == NULL)
-        return;
-}
-
 
 
 static PyObject* binary_c_create_binary(PyObject *self, PyObject *args){
@@ -88,26 +64,6 @@ static PyObject* binary_c_create_binary(PyObject *self, PyObject *args){
   return ret;
 }
 
-
-
-static PyObject* binary_c_function_prototype(PyObject *self, PyObject *args){
-
-  double var1, var2;
-  char* empty_str = "";
-
-
-  /* Parse the input tuple */
-  if (!PyArg_ParseTuple(args, "dd", &var1, &var2))
-    return NULL;
-
-
-
-  /* Return the evolved binary */
-  PyObject *ret = Py_BuildValue("");
-
-  return ret;
-}
-
 static PyObject* binary_c_run_binary(PyObject *self, PyObject *args){
 
   int out, ktype_1, ktype_2, comenv_count;
@@ -128,4 +84,42 @@ static PyObject* binary_c_run_binary(PyObject *self, PyObject *args){
   PyObject *ret = Py_BuildValue("ddddii", m1_out, m2_out, orbital_separation_out, eccentricity_out, ktype_1, ktype_2);
 
   return ret;
+}
+
+static PyObject* binary_c_function_prototype(PyObject *self, PyObject *args){
+
+  double var1, var2;
+  char* empty_str = "";
+
+
+  /* Parse the input tuple */
+  if (!PyArg_ParseTuple(args, "dd", &var1, &var2))
+    return NULL;
+
+
+
+  /* Return the evolved binary */
+  PyObject *ret = Py_BuildValue("");
+
+  return ret;
+}
+
+static PyMethodDef module_methods[] = {
+    {"create_binary", binary_c_create_binary, METH_VARARGS, create_binary_docstring},
+    {"run_binary", binary_c_run_binary, METH_VARARGS, run_binary_docstring},
+    {"function_prototype", binary_c_function_prototype, METH_VARARGS, function_prototype_docstring},
+    {NULL, NULL, 0, NULL} // 'sentinel'??
+};
+
+static struct PyModuleDef binary_c =
+{
+  PyModuleDef_HEAD_INIT,
+  "binary_c",
+  "usage information should go here",
+  -1,
+  module_methods
+};
+
+PyMODINIT_FUNC PyInit_binary_c(void){
+  return PyModule_Create(&binary_c);
 }
